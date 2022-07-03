@@ -1,0 +1,74 @@
+:root {
+    --task-window-bg-color: white;
+    --task-window-shadow: 0 0 10px rgba(0,0,0,0.3);
+    --task-window-overlay-bg: rgba(0,0,0,0.4);
+
+    --task-button-bg: #cecece;
+    --task-button-bg-hover: #efefef;
+    --task-button-text: #000;
+
+    --task-button-primary-bg: #4141fa;
+    --task-button-primary-bg-hover: #7373ff;
+    --task-button-primary-text: #fff;
+}
+
+.task-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-flow: wrap;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-content: center;
+    background-color: var(--task-window-overlay-bg);
+    z-index: 1000;
+}
+
+.task-overlay .task-window * {
+    box-sizing: border-box;
+}
+
+.task-overlay .task-window {
+    min-width: 400px;
+    height: fit-content;
+    background-color: var(--task-window-bg-color);
+    box-shadow: var(--task-window-shadow);
+    padding: 10px;
+}
+
+.task-overlay .task-window form .task-window-headline,
+.task-overlay .task-window form .task-window-description {
+    margin-bottom: 10px;
+}
+
+.task-overlay .task-window form input,
+.task-overlay .task-window form textarea {
+    border: none;
+    display: block;
+    padding: 10px;
+    width: 100%;
+}
+
+.task-overlay .task-window form .task-window-options button {
+    border: none;
+    background-color: var(--task-button-bg);
+    padding: 10px 15px;
+    cursor: pointer;
+    color: var(--task-button-text);
+    border-radius: 5px;
+}
+
+.task-overlay .task-window form .task-window-options button:hover {
+    background-color: var(--task-button-bg-hover);
+}
+
+.task-overlay .task-window form .task-window-options button.primary {
+    background-color: var(--task-button-primary-bg);
+    color: var(--task-button-primary-text);
+}
+
+.task-overlay .task-window form .task-window-options button.primary:hover {
+    background-color: var(--task-button-primary-bg-hover);
+}

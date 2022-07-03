@@ -1,0 +1,146 @@
+.tasks {
+    --border-color: #ccc;
+    --background-color: #ccc;
+    --background-color-hover: #eee;
+    --text-color: #000;
+    --task-background-color: #fff;
+    --task-border-color: #ccc;
+    --background-counter: #efefef;
+
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.tasks * {
+    box-sizing: border-box;
+}
+
+.tasks .tasks-columns {
+    display: flex;
+}
+
+/* column */
+
+.tasks .tasks-column {
+    border-right: 1px solid var(--border-color);
+    display: flex;
+    flex-flow: column;
+    width: 300px;
+}
+
+.tasks .tasks-column-body {
+    flex-grow: 1;
+    overflow: auto;
+}
+
+.tasks .tasks-column .tasks-column-title {
+    background: var(--background-color);
+    padding: 10px;
+    cursor: grab;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    height: 40px;
+}
+
+.tasks .tasks-column.empty .tasks-column-title {
+    cursor: pointer;
+    justify-content: center;
+    user-select: none;
+}
+
+.tasks .tasks-column .tasks-column-title .tasks-column-title-count {
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    background-color: var(--background-counter);
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.6;
+    user-select: none;
+}
+
+.tasks .tasks-column .tasks-column-title input {
+    background: var(--background-color);
+    border: none;
+    width: 100%;
+    cursor: text;
+}
+
+.tasks .tasks-column .tasks-column-title input:hover {
+    background: var(--background-color-hover);
+}
+
+.tasks .tasks-column-body-add-task {
+    width: 100%;
+    background: var(--background-color-hover);
+    padding: 5px;
+    text-align: center;
+    display: block;
+    color: var(--text-color);
+    text-decoration: none;
+    user-select: none;
+    margin-top: 20px;
+}
+
+/* tempDrag */
+
+.tempDrag {
+    position: absolute;
+    display: none;
+}
+
+.tempDrag.show {
+    display: block;
+    cursor: grabbing !important;
+}
+
+.tempDrag.show * {
+    cursor: grabbing !important;
+    user-select: none;
+}
+
+.tasks .tasks-column-body-tasks-task.tempDrag {
+    background: var(--task-background-color);
+    border: 1px solid var(--task-border-color);
+}
+
+/* task */
+
+.tasks .tasks-column-body-tasks-task {
+    padding: 10px;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    margin: 10px 0;
+    cursor: grab;
+}
+
+.tasks .tasks-column-body-tasks-task span {
+    cursor: pointer;
+    display: block;
+    user-select: none;
+}
+
+.tasks .tasks-column-body-tasks-task textarea {
+    background: transparent;
+    border: none;
+    resize: none;
+    width: 100%;
+}
+
+/* in between add btn */
+
+.tasks .tasks-inbetween-add-task {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    position: absolute;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    background-color: white;
+    font-size: 20px;
+    line-height: 1.4;
+    cursor: pointer;
+    z-index: 20;
+}
