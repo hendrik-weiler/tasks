@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Documentation</title>
+    <meta charset="utf-8">
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="search.data.js"></script>
+</head>
+<body>
+    <template id="searchEntry">
+        <a href="$link" class="searchResult">
+            <h4>$name</h4>
+            <p>$description</p>
+        </a>
+    </template>
+    <div class="container">
+        <div class="header">
+            <div class="col1">
+                <h1>Tasks Documentation v.0.1</h1>
+            </div>
+            <div class="col2">
+                <input id="search" type="search" placeholder="Search for classes, properties, methods and pages...">
+            </div>
+        </div>
+        <div class="content">
+            <div class="search-results"></div>
+            <div class="content-inner">
+                <div class="breadcrumb-nav"><a href="index.html">Main</a> \ <a href="namespace.Tasks.html">Tasks</a> \ Tasks</div><p class="description">
+    Creates a tasks ui<br />
+<br />
+Options:<br />
+HTMLELement canvas - The canvas where the user interface will be created<br />
+string language - The ISO 639-1 code for example de_DE    </p>
+<h4>
+    <span class="class-attr">public class</span>
+    <span class="class-name">Tasks</span>
+    </h4>
+<table>
+    <tr>
+        <td>
+                            <span class="entry-attr">public                                            object                                    </span>
+                config                    </td>
+        <td>Returns the configuration object</td>
+    </tr>
+    <tr>
+        <td>
+                            <span class="entry-attr">public                                            HTMLElement                                    </span>
+                columnsNode                    </td>
+        <td>Returns the node where the columns reside</td>
+    </tr>
+    <tr>
+        <td>
+                            <span class="entry-attr">public                                            Function                                    </span>
+                mouseupListener                    </td>
+        <td>Returns the listener for mousemove</td>
+    </tr>
+    <tr>
+        <td>
+                            <span class="entry-attr">public                                            Function                                    </span>
+                tempDrag                    </td>
+        <td>Returns the temporary drag node for dragging</td>
+    </tr>
+    <tr>
+        <td>
+                            <span class="entry-attr">public                                            number                                    </span>
+                columnLeft                    </td>
+        <td>Returns the left starting point for dragging columns</td>
+    </tr>
+    <tr>
+        <td>
+                            <span class="entry-attr">public                                            number                                    </span>
+                targetColumnLeft                    </td>
+        <td>Returns the current column left position</td>
+    </tr>
+    <tr>
+        <td>
+                            <span class="entry-attr">public                                            number                                    </span>
+                taskLeft                    </td>
+        <td>Returns the left starting point for dragging a task</td>
+    </tr>
+    <tr>
+        <td>
+                            <span class="entry-attr">public                                            number                                    </span>
+                targetTaskLeft                    </td>
+        <td>Returns the current task left position</td>
+    </tr>
+    <tr>
+        <td>
+                            <span class="entry-attr">public                                            number                                    </span>
+                taskTop                    </td>
+        <td>Returns the top starting point for dragging a task</td>
+    </tr>
+    <tr>
+        <td>
+                            <span class="entry-attr">public                                            number                                    </span>
+                targetTaskTop                    </td>
+        <td>Returns the current task top position</td>
+    </tr>
+    <tr>
+        <td>
+                            <span class="entry-attr">public                                            boolean                                    </span>
+                mouseDraggingColumn                    </td>
+        <td>Returns if a column is being dragged or not</td>
+    </tr>
+    <tr>
+        <td>
+                            <span class="entry-attr">public                                            boolean                                    </span>
+                mouseDraggingTask                    </td>
+        <td>Returns if a task is being dragged or not</td>
+    </tr>
+    <tr>
+        <td>
+                            <span class="entry-attr">public                                            boolean                                    </span>
+                preventInBetweenAddBtns                    </td>
+        <td>Returns if in between add buttons should be shown or not</td>
+    </tr>
+    <tr>
+        <td>
+                            <span class="entry-attr">public                                            <a href="class.Tasks.TaskWindow.html">TaskWindow</a>
+                                    </span>
+                taskWindowInstance                    </td>
+        <td>Returns the task window instance</td>
+    </tr>
+    <tr>
+        <td>
+                            <span class="entry-attr">public                                            boolean                                    </span>
+                isMouseLongerPressedTask                    </td>
+        <td>Returns if the mouse is longer pressed at a task before an action occurs</td>
+    </tr>
+    <tr>
+        <td>
+            <span class="entry-attr">public function</span>
+            <a href="class.Tasks.Tasks.constructor.html">
+                constructor            </a>
+        </td>
+        <td>The constructor...</td>
+    </tr>
+    <tr>
+        <td>
+            <span class="entry-attr">public function</span>
+            <a href="class.Tasks.Tasks.createId.html">
+                createId            </a>
+        </td>
+        <td>Updates a task by id...</td>
+    </tr>
+    <tr>
+        <td>
+            <span class="entry-attr">public function</span>
+            <a href="class.Tasks.Tasks.translate.html">
+                translate            </a>
+        </td>
+        <td>Translates a string...</td>
+    </tr>
+    <tr>
+        <td>
+            <span class="entry-attr">public function</span>
+            <a href="class.Tasks.Tasks.mouseup.html">
+                mouseup            </a>
+        </td>
+        <td>Handles the mouse up interaction...</td>
+    </tr>
+    <tr>
+        <td>
+            <span class="entry-attr">public function</span>
+            <a href="class.Tasks.Tasks.mousedown.html">
+                mousedown            </a>
+        </td>
+        <td>Handles the mouse down interaction...</td>
+    </tr>
+    <tr>
+        <td>
+            <span class="entry-attr">public function</span>
+            <a href="class.Tasks.Tasks.sortingColumns.html">
+                sortingColumns            </a>
+        </td>
+        <td>Checks if a column can be dragged to another place...</td>
+    </tr>
+    <tr>
+        <td>
+            <span class="entry-attr">public function</span>
+            <a href="class.Tasks.Tasks.mousemove.html">
+                mousemove            </a>
+        </td>
+        <td>Handles the mouse move interaction...</td>
+    </tr>
+    <tr>
+        <td>
+            <span class="entry-attr">public function</span>
+            <a href="class.Tasks.Tasks.addInBetweenAddTaskButton.html">
+                addInBetweenAddTaskButton            </a>
+        </td>
+        <td>Adds a in between add task button...</td>
+    </tr>
+    <tr>
+        <td>
+            <span class="entry-attr">public function</span>
+            <a href="class.Tasks.Tasks.isInBetweenTask.html">
+                isInBetweenTask            </a>
+        </td>
+        <td>Checks for in between tasks add buttons...</td>
+    </tr>
+    <tr>
+        <td>
+            <span class="entry-attr">public function</span>
+            <a href="class.Tasks.Tasks.movingTask.html">
+                movingTask            </a>
+        </td>
+        <td>Checks if the dragging task can be dropped in a column...</td>
+    </tr>
+    <tr>
+        <td>
+            <span class="entry-attr">public function</span>
+            <a href="class.Tasks.Tasks.destroy.html">
+                destroy            </a>
+        </td>
+        <td>Destroys the instance...</td>
+    </tr>
+    <tr>
+        <td>
+            <span class="entry-attr">public function</span>
+            <a href="class.Tasks.Tasks.loadFromData.html">
+                loadFromData            </a>
+        </td>
+        <td>Load tasks and columns from a data source...</td>
+    </tr>
+    <tr>
+        <td>
+            <span class="entry-attr">public function</span>
+            <a href="class.Tasks.Tasks.addTask.html">
+                addTask            </a>
+        </td>
+        <td>Adds a task to a column...</td>
+    </tr>
+    <tr>
+        <td>
+            <span class="entry-attr">public function</span>
+            <a href="class.Tasks.Tasks.updateCounts.html">
+                updateCounts            </a>
+        </td>
+        <td>Updates all task counts of each column...</td>
+    </tr>
+    <tr>
+        <td>
+            <span class="entry-attr">public function</span>
+            <a href="class.Tasks.Tasks.addEmptyColumn.html">
+                addEmptyColumn            </a>
+        </td>
+        <td>Adds a empty column where you can add real columns with...</td>
+    </tr>
+    <tr>
+        <td>
+            <span class="entry-attr">public function</span>
+            <a href="class.Tasks.Tasks.render.html">
+                render            </a>
+        </td>
+        <td>Renders the tasks initially...</td>
+    </tr>
+    </table>            </div>
+        </div>
+        <div class="footer">
+           2022 © Hendrik Weiler | 2022/03/07 14:50:11        </div>
+    </div>
+</body>
+</html>
